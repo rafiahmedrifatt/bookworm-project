@@ -1,4 +1,4 @@
-const getStoredBook = () => {
+export const getStoredBook = () => {
     const storedBook = localStorage.getItem('readList')
     if (storedBook) {
         const storedBookData = JSON.parse(storedBook);

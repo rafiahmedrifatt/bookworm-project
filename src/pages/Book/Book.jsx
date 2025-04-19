@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router";
 
-const Book = ({ book }) => {
-  const { bookId, category, image, publisher, rating, review } = book;
+const Book = ({ singleBook }) => {
+  const { bookId, category, image, publisher, rating, review } = singleBook;
   return (
     <Link to={`/bookDetails/${bookId}`}>
       <div className="card bg-base-100 w-96 shadow-sm">

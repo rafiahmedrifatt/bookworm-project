@@ -1,11 +1,18 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const links = (
     <div className="flex gap-4">
-      <li>Home</li>
-      <li>About</li>
-      <li>Home</li>
+      <Link to="/">
+        <li>Home</li>
+      </Link>
+      <Link to="/about">
+        <li>About</li>
+      </Link>
+      <Link to="/readList">
+        <li>Read List</li>
+      </Link>
     </div>
   );
   return (

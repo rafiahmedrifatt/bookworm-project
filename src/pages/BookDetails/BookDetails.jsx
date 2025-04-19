@@ -5,7 +5,6 @@ import { addToStoredLocal } from "../../utility/addToLS";
 const BookDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
-  console.log(data, id);
   const singleData = data.find((book) => book.bookId === parseInt(id));
   const { image, review } = singleData || {};
 
