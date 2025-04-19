@@ -7,15 +7,16 @@ const Books = () => {
     fetch("booksData.json")
       .then((res) => res.json())
       .then((data) => setBooks(data));
-  });
+  }, []);
   return (
     <div>
-      <h1>Hello Ami books</h1>
+      <h1>Hello Ami bookssss {books.length}</h1>
       <div>
-        {books.map((book) => (
-          <Book book={book} />
+        {books.map((book, index) => (
+          <Book key={index} book={book} />
         ))}
       </div>
+      <h2>Hello</h2>
     </div>
   );
 };
